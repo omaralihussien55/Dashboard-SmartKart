@@ -1,0 +1,70 @@
+{
+  "btns":{
+    "save":"Save",
+    "cancel":"Cancel",
+    "remove":"Remove",
+     "switch":"Ar"
+  },
+  "sidebar":{
+       "dashboard":"Dashboard",
+       "setting":"Settings",
+       "menu":{
+         "title":"Menu",
+         "category":"Categories",
+         "Products":"Products",
+         "orders":"Orders"
+       },
+
+       "manger":{
+           "title":"Manger",
+          "discount":"Discounts",
+          "gift":"Gifts",
+          "coupoun":"Coupouns"
+       }
+  },
+  "menu":{
+    "products":{
+      "title":"Products",
+      "titledetail":"Product Details",
+         "btn":{
+            "add":"Add Product",
+            "edit":"Edit Product"
+         },
+         "input":{
+             "name":"Name Product",
+             "price":"Price",
+             "description":"Description",
+             "category":"Category",
+             "discount":"Discount",
+             "percDiscount":"Discount percentage",
+             "finalprice":"Final price",
+             "sku":"Sku",
+              "availabilityStatus":"Status"
+         }
+    },
+    "category":{
+      "title":"Categories",
+      "titledetail":"Category Details",
+         "btn":{
+            "add":"Add Category",
+            "edit":"Edit Category"
+         },
+         "input":{
+             "name":"Name",
+             "slug":"Slug"
+         }
+    },
+    "orders":{
+      "title":"Orders",
+      "titledetail":"Orders Details",
+         "btn":{
+            "add":"Add Orders",
+            "edit":"Edit Orders"
+         },
+         "input":{
+             "name":"Name",
+             "slug":"Slug"
+         }
+    }
+  }
+}

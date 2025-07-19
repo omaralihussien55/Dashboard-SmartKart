@@ -1,0 +1,69 @@
+{
+  "btns": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "remove": "حذف",
+    "switch":"En"
+  },
+  "sidebar": {
+    "dashboard":"لوحة التحكم",
+    "setting":"الاعدادات",
+    "menu": {
+      "title": "القائمة",
+      "category": "الفئات",
+      "Products": "المنتجات",
+      "orders":"الطلبات"
+    },
+    "manger": {
+      "title": "الإدارة",
+      "discount": "الخصومات",
+      "gift": "الهدايا",
+      "coupoun": "الكوبونات"
+    }
+  },
+  "menu": {
+    "products": {
+      "title": "المنتجات",
+      "titledetail": "تفاصيل المنتج",
+      "btn": {
+        "add": "إضافة منتج",
+        "edit": "تعديل المنتج"
+      },
+      "input": {
+        "name": "اسم المنتج",
+        "price": "السعر",
+        "description": "الوصف",
+         "category":"الفئة",
+         "discount":"الخصم",
+         "percDiscount":"نسبة الخصم",
+         "finalprice":"السعر النهائى",
+         "sku":"الرقم التعريفى",
+         "availabilityStatus":"الحالة"
+      }
+    },
+    "category": {
+      "title": "الفئات",
+      "titledetail": "تفاصيل الفئة",
+      "btn": {
+        "add": "إضافة فئة",
+        "edit": "تعديل الفئة"
+      },
+      "input": {
+        "name": "الاسم",
+        "slug": "المعرف"
+      }
+    },
+    "orders": {
+      "title": "الطلبات",
+      "titledetail": "تفاصيل الطلب",
+      "btn": {
+        "add": "إضافة طلب",
+        "edit": "تعديل الطلب"
+      },
+      "input": {
+        "name": "الاسم",
+        "slug": "المعرف"
+      }
+    }
+  }
+}

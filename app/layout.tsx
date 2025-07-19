@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ReduxProvider } from "@/redux/ReduxProvider";
+import { AppProviders } from "@/reactQuery/ProviderQuery";
+import AppProvider from "./_ui/wrapper/AppProvider";
+import { Suspense } from "react";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,12 +27,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  //   const lang = typeof window !== "undefined" ? localStorage.getItem("i18nextLng") || "en" : "en"
+  // const dir = lang === "ar" ? "rtl" : "ltr"
   return (
-    <html lang="en">
+    <html >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        {children}
+      
+      <Suspense fallback={<>.... lo</>}>
+        <AppProviders>
+            <ReduxProvider>
+                <AppProvider>
+                        {children}
+                
+                </AppProvider>
+            </ReduxProvider>
+        </AppProviders>
+       </Suspense>
       </body>
     </html>
   );
