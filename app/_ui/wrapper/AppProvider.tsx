@@ -9,7 +9,7 @@ const AppProvider:FC<{children:React.ReactNode}> = ({children}) => {
      const {lang} = useAppSelector(state=> state.cart)
      console.log(lang)
   useEffect(()=>{
-const language = typeof window !== "undefined" ? localStorage.getItem("i18nextLng") || "en" : "en"
+// const language = typeof window !== "undefined" ? localStorage.getItem("i18nextLng") || "en" : "en"
 
     const islang = lang ? "en":"ar"
     i18n.changeLanguage(islang)

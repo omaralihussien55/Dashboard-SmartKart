@@ -33,7 +33,7 @@ const ProductList = () => {
      <Formik
       initialValues={initialValues}
       validationSchema={toFormikValidationSchema(validationSchema)}
-      onSubmit={(values)=>{
+      onSubmit={()=>{
             toast.success("Product saved successfully!")
       }}
       >

@@ -1,11 +1,6 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import Image from "next/image"
-import { useTranslation } from "react-i18next"
-
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
 export type Payment = {
   id: string
   amount: number

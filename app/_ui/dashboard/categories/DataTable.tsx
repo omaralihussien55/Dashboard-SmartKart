@@ -28,14 +28,14 @@ type Category = {
   slug: string;
 }
 
-interface DataTableProps<Category, TValue> {
+interface DataTableProps<Category, _> {
   columns: ColumnDef<Category, unknown>[]
   data: Category[],
   totalPages?:number,
   isLoading?:boolean
 }
 
-export function DataTable<TData, TValue>({
+export function DataTable<TData, _>({
   columns,
   data,
   isLoading

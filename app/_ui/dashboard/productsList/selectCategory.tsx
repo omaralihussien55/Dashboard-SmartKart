@@ -8,13 +8,12 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { GetCategoryByUseInfinte } from "@/reactQuery/categories/query"
-import React, { useRef } from 'react'
+import React from 'react'
 import { useTranslation } from "react-i18next"
 
 const SelectCategory = () => {
       const {t} = useTranslation()
       const { data} = GetCategoryByUseInfinte()
-console.log("data",data)
 
   return (
     <div className="grid gap-2">
