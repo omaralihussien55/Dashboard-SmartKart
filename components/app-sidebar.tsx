@@ -57,7 +57,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         icon: Bot,
         items: [
           { title: t("sidebar.menu.Products"), url: "/dashboard/products" },
-          { title: t("sidebar.menu.category"), url: "/dashboard/categories" },
+          // { title: t("sidebar.menu.category"), url: "/dashboard/categories" },
           { title: t("sidebar.menu.orders"), url: "/dashboard/orders" },
         ],
       },
