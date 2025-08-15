@@ -4,7 +4,7 @@ import React from 'react'
 
 
 type tParams = Promise<{ id: string }>;
-const page = async({ params }: { params: tParams }) => {
+const CategoryDetailpage = async({ params }: { params: tParams }) => {
       const slug = await params;
       const categoryID = slug.id;
   return (
@@ -14,4 +14,4 @@ const page = async({ params }: { params: tParams }) => {
   )
 }
 
-export default page
+export default CategoryDetailpage
