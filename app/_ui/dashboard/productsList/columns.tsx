@@ -1,7 +1,7 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-export type Payment = {
+export type ProductTable = {
   id: string
   amount: number
   status: "pending" | "processing" | "success" | "failed"
@@ -9,9 +9,9 @@ export type Payment = {
 }
 
 
-export const Colum = (t:(key:string)=> string): ColumnDef<Payment>[] =>{
+export const Colum = (t:(key:string)=> string): ColumnDef<ProductTable>[] =>{
 
- const columns: ColumnDef<Payment>[] = [
+ const columns: ColumnDef<ProductTable>[] = [
    {
     accessorKey: "sku" ,
     header:  t("menu.products.input.sku"),

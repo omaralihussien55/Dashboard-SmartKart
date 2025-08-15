@@ -62,7 +62,11 @@
       },
       "input": {
         "name": "الاسم",
-        "slug": "المعرف"
+        "slug": "المعرف",
+         "total": "السعر قبل الخصم",
+         "discountedTotal": "الاجمالى",
+         "totalProducts": "اجمالى المنتجات",
+          "totalQuantity": "اجمالى الكمية"
       }
     }
   }

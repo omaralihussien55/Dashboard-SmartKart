@@ -55,7 +55,6 @@ const ProductList = () => {
          </Formik>
          </DialogDemo>
       </HeaderPages>
-
           <TableList />
     </div>
   )

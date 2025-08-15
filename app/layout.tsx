@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
       
       <Suspense fallback={<>.... lo</>}>

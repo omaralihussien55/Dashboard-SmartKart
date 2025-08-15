@@ -47,7 +47,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     navMain: [
       {
         title: t("sidebar.dashboard"),
-        url: "/dashboard/dashboard",
+        url: "/dashboard",
         icon: SquareTerminal,
         isActive: true,
       },
@@ -67,8 +67,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         icon: BookOpen,
         items: [
           { title: t("sidebar.manger.discount"), url: "/dashboard/discounts" },
-          { title: t("sidebar.manger.gift"), url: "/dashboard/coupons" },
-          { title: t("sidebar.manger.coupoun"), url: "/dashboard/gifts" },
+          { title: t("sidebar.manger.gift"), url: "/dashboard/gifts" },
+          { title: t("sidebar.manger.coupoun"), url: "/dashboard/coupons" },
         ],
       },
       {

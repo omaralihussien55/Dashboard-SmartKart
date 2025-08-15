@@ -40,6 +40,8 @@ export function DataTable({
   data,
   isLoading
 }: DataTableProps) {
+
+  
   const [sorting, setSorting] = React.useState<SortingState>([])
   const router = useRouter()
 

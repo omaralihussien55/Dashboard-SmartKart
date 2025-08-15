@@ -63,7 +63,11 @@
          },
          "input":{
              "name":"Name",
-             "slug":"Slug"
+             "slug":"Slug",
+              "total":"Discount before Price",
+              "discountedTotal": "Total",
+              "totalProducts": "Products Total",
+              "totalQuantity":"Quantity Total"
          }
     }
   }

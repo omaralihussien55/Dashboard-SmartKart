@@ -4,14 +4,16 @@ type CartState = {
   items: string[];
   lang:boolean,
    page:number,
-   pageSize:number
+   pageSize:number,
+   category:string,
 };
 
 const initialState: CartState = {
   items: [],
   lang:false,
    page:1,
-   pageSize:10
+   pageSize:10,
+   category:"all"
 };
 
 
@@ -34,8 +36,11 @@ const CounterSlice = createSlice({
        
                    state.page = totalPages
     },
+    changeCategory(state,action:PayloadAction<string>){
+       state.category = action.payload
+    },
   },
 });
 
-export const { addItem, removeItem ,changeLang,ChangeValuePageProduct} = CounterSlice.actions;
+export const { addItem, removeItem ,changeLang,ChangeValuePageProduct,changeCategory} = CounterSlice.actions;
 export default CounterSlice.reducer;

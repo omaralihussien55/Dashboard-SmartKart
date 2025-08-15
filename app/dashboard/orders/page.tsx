@@ -1,9 +1,10 @@
+import OrderList from '@/app/_ui/dashboard/orders/OrderList'
 import React from 'react'
 
 const page = () => {
   return (
-    <div >
-      dashboard
+    <div>
+      <OrderList />
     </div>
   )
 }

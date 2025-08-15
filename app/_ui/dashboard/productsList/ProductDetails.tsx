@@ -21,7 +21,7 @@ const ProductDetails:FC<{id:string}> = ({id}) => {
         </HeaderPages>
       
   
-      <div className='w-full md:w-3/4 mx-auto bg-background p-3 rounded-lg my-5'>
+      <div className='w-full md:w-3/4 mx-auto  p-5 rounded-lg my-7 bg-sidebar'>
       {isLoading && <div className='min-h-48 w-full flex justify-center items-center'>
         <Loader />
          </div>}

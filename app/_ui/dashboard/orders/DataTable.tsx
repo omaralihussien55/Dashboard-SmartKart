@@ -18,15 +18,17 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import PaginationProducts from "./Pagination"
 import React from "react"
 import { useRouter } from "next/navigation"
 import Loader from "../../loader/Loader"
-import { ProductTable } from "./columns"
+import PaginationOrders from "./Pagination"
+import { OrderTable } from "./columns"
 
-interface DataTableProps {
-  columns: ColumnDef<ProductTable, unknown>[]
-  data: ProductTable[],
+
+
+interface DataTableProps{
+  columns: ColumnDef<OrderTable, unknown>[]
+  data: OrderTable[],
   totalPages?:number,
   isLoading?:boolean
 }
@@ -36,7 +38,9 @@ export function DataTable({
   data,
   totalPages,
   isLoading
-}: DataTableProps ){
+}: DataTableProps) {
+
+
   const [sorting, setSorting] = React.useState<SortingState>([])
   const router = useRouter()
   const table = useReactTable({
@@ -88,7 +92,9 @@ export function DataTable({
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell className="text-center text-[12px] md:text-sm cursor-pointer" key={cell.id}
-                  onClick={()=> router.push(`/dashboard/products/${row.original?.id}`)}
+                  onClick={()=> router.push(`/dashboard/orders/${row.original?.id}`)
+                
+                }
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
@@ -109,7 +115,7 @@ export function DataTable({
     </div>
     
            <div className="flex items-center justify-end space-x-2 py-4">
-            <PaginationProducts totalPage={Number(totalPages)} />
+            <PaginationOrders totalPage={Number(totalPages)} />
       </div>
     </div>
    
