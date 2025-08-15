@@ -1,3 +1,4 @@
+
 import CategoryDetails from '@/app/_ui/dashboard/categories/categoryDetails';
 import React from 'react'
 
@@ -5,11 +6,10 @@ import React from 'react'
 
 type tParams = Promise<{ id: string }>;
 const CategoryDetailpage = async({ params }: { params: tParams }) => {
-      const slug = await params;
-      const categoryID = slug.id;
+      const categoryID =(await params).id;
   return (
     <div>
-      <CategoryDetails  category={categoryID}/>
+      <CategoryDetails category={categoryID}/>
     </div>
   )
 }
