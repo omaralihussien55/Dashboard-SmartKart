@@ -1,3 +1,4 @@
+"use client"
 
 import CategoryDetails from '@/app/_ui/dashboard/categories/categoryDetails';
 import React from 'react'

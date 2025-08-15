@@ -6,10 +6,8 @@ import { GetCategoryByUseInfinte } from '@/reactQuery/categories/query'
 
 const TableList = () => {
    const {t} = useTranslation()
-//    const {pageSize,page} = useAppSelector(state => state.cart)
   const {data:categories,isSuccess,isLoading} = GetCategoryByUseInfinte()
     const columns = Colum(t)
-    console.log(categories)
   return (
     <div>
       
