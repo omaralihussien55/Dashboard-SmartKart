@@ -2,8 +2,9 @@
 import { AddCardQuery } from '@/reactQuery/orders/query'
 import { useRouter } from 'next/navigation'
 import React, { FC } from 'react'
+import { ProductOrderProps } from '../orderdetails/CardProductOrder'
 
-const CardProduct:FC<{item:any}> = ({item}) => {
+const CardProduct:FC<{item:ProductOrderProps}> = ({item}) => {
   const {mutate:AddToCart} = AddCardQuery()
 const router = useRouter()
   const addCart = ()=>{

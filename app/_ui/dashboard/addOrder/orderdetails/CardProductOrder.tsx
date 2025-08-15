@@ -1,6 +1,17 @@
 import React, { FC } from 'react'
 
-const CardProductOrder:FC<{item:any}> = ({item}) => {
+
+export interface ProductOrderProps{
+  id?:string | number
+  title:string | number
+    price:string | number
+      thumbnail:string 
+      quantity:string | number
+          discountedTotal:string | number
+          total:string | number
+           discountPercentage:string | number
+}
+const CardProductOrder:FC<{item:ProductOrderProps}> = ({item}) => {
   return (
     <>
     <div className='grid gap-2 p-2 mb-2'>

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import CardProductOrder from './CardProductOrder'
+import CardProductOrder, { ProductOrderProps } from './CardProductOrder'
 
-const  ProductOrder:FC<{products:Array<any>}> = ({products}) => {
+const  ProductOrder:FC<{products:Array<ProductOrderProps>}> = ({products}) => {
   return (
     <div className='grow overflow-y-scroll'>
       {products?.map((item,idx)=>{
