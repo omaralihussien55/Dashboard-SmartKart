@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Colum } from './columns'
 import { DataTable } from './DataTable'
