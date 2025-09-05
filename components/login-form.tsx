@@ -10,12 +10,25 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useRouter } from "next/navigation"
-
+// import { useState } from "react"
+// import { signIn } from "next-auth/react"
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  // const [username, setUsername] = useState("")
+  // const [password, setPassword] = useState("")
   const router = useRouter()
+
+   const handleLogin = async () => {
+    // const res = await signIn("credentials", {
+    //   username,
+    //   password,
+    //   redirect: true,
+    //   callbackUrl: "/dashboard/products"
+    // })
+    router.push("/dashboard/products")
+  }
   return (
     <div className={cn("flex flex-col gap-6 w-full", className)} {...props}>
       <Card>
@@ -29,13 +42,13 @@ export function LoginForm({
           <div>
             <div className="flex flex-col gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="username">username</Label>
                 <Input
-                  id="email"
-                  type="email"
+                  id="username"
                   placeholder="m@example.com"
                   required
-                  value={"omar@gmail.com"}
+                  value={"kminchelle"}
+                  //  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
               <div className="grid gap-3">
@@ -48,10 +61,12 @@ export function LoginForm({
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required value={"1234"} />
+                <Input id="password" type="password" required value={"1234"} 
+                //  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
               <div className="flex flex-col gap-3">
-                <Button onClick={()=> router.push("/dashboard/products")} className="w-full">
+                <Button onClick={handleLogin} className="w-full">
                   Sign In
                 </Button>
               </div>
