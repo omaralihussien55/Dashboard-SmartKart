@@ -1,8 +1,14 @@
 "use client"
 import React, { FC } from 'react'
+
+import dynamic from "next/dynamic";
 import Header from './Header'
 import MenuList from './posdetails/MenuList'
-import OrderDetails from './orderdetails/OrderDetails'
+
+const OrderDetails = dynamic(
+  () => import("./orderdetails/OrderDetails"),
+  { ssr: false }
+);
 
 const AddOrderList:FC<{id?:string}> = ({id}) => {
 

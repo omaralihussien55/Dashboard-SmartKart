@@ -1,7 +1,15 @@
 import React from 'react'
-import Categories from './Categories'
-import Products from './Products'
+import dynamic from "next/dynamic";
 
+const Categories = dynamic(
+  () => import("./Categories"),
+  { ssr: false }
+);
+
+const Products = dynamic(
+  () => import("./Products"),
+  { ssr: false }
+);
 const MenuList = () => {
   return (
     <div className=''>

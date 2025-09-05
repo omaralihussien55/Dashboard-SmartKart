@@ -1,11 +1,22 @@
 "use client"
 
 import React from 'react'
-import CardProduct from './CardProduct'
+
+import dynamic from "next/dynamic";
 import { GetAllProductQuery } from '@/reactQuery/product/query'
 import { useAppSelector } from '@/redux/hooks'
-import PaginationProducts from '../../productsList/Pagination'
 import { ProductOrderProps } from '../orderdetails/CardProductOrder'
+
+const CardProduct = dynamic(
+  () => import("./CardProduct"),
+  { ssr: false }
+);
+
+const PaginationProducts = dynamic(
+  () => import("../../productsList/Pagination"),
+  { ssr: false }
+);
+
 
 const Products = () => {
   const {page,pageSize,category} = useAppSelector(state=> state.cart)
